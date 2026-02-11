@@ -46,6 +46,7 @@ func (ge *GoTLSEvent) Decode(payload []byte) error {
 }
 
 func (ge *GoTLSEvent) String() string {
+	fmt.Println("====================== Definitely Here ====================")
 	s := fmt.Sprintf("PID: %d, Comm: %s, TID: %d, PayloadType:%d, Payload: %s\n", ge.Pid, string(ge.Comm[:]), ge.Tid, ge.inner.PayloadType, string(ge.Data[:ge.Len]))
 	return s
 }
